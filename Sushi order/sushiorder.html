@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi order</title>
+    <style>
+        body {
+            max-width: 600px;
+        }
+        label, input, select, textarea {
+            width: 100%;
+        } 
+    </style>
+</head>
+<body>
+    <h2>Sushi Order</h2>
+    <form action="#" method="post">
+        <label for="name">Імʼя:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="address">Адреса:</label>
+        <input type="text" id="address" name="address">
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="sticks">Кількість паличок:</label>
+        <input type="number" id="sticks" name="sticks">
+
+        <label for="stickType">Вид паличок:</label>
+        <select id="stickType" name="stickType">
+            <option value="regular">Звичайні</option>
+            <option value="learning">Навчальні</option>
+        </select>
+
+        <label for="sushi">Виберіть суші:</label>
+        <select id="sushi" name="sushi" multiple>
+            <option value="philadelphia">Філадельфія</option>
+            <option value="maki">Макі</option>
+            <option value="nigiri">Нігі</option>
+            <option value="sashimi">Сашимі</option>
+        </select>
+
+        <label>
+            <input type="checkbox" name="napkins"> Чи потрібні серветки?
+        </label>
+
+        <label for="comment">Додатковий коментар:</label>
+        <textarea id="comment" name="comment" rows="4"></textarea>
+
+        <button type="submit">Замовити</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beg Site</title>
+
+
+    <style>
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li{
+            padding: 0.2em;
+        }
+
+        form{
+            width: 300;
+            font-family: Verdana, sans-serif;
+            font-size: 15px;
+            padding: 1em;
+            border: 1em solid #000;
+            border-radius: 1em;
+        }
+
+        input{
+            font: 1em sans-serif;
+            width: 150px;
+            border: 1em solid #777;
+            transition: 0.3;
+        }
+
+        input:focus{
+            border: 1px solid rgb(101, 210, 126);
+        }
+
+        input[type="submit"]{
+            background: black;
+            color: white;
+        }
+
+        input[type="text"]{
+            color: blue;
+        }
+
+        input[type="uname"]{
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <ul>
+
+    <li>
+        <label for="uname">Name:</label>
+        <input type="text" id="uname" name="userName">
+    </li>
+    <li>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="userEmail">
+    </li>
+
+    <li>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="userPhone">
+    </li>
+
+    <li>
+        <label for="message">Message:</label>
+        <textarea id="message" name="userMessage">
+    </li>
+
+    <li>
+        <input type="submit" value="Send my message">
+    </li>
+    </ul>
+
+</body>
+</html>

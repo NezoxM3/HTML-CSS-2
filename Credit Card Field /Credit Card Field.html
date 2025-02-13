@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма оплати</title>
+    <style>
+        body {
+            max-width: 400px;
+            margin: auto;
+            font-family: Arial, sans-serif;
+        }
+        label, input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            display : flex;
+            list-style: none;
+        }
+        
+        li{
+            padding-right: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h2>Credit Card Details</h2>
+    <form action="#" method="post">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" name="cardNumber">
+
+        <label for="cardName">Name On Card</label>
+        <input type="text" id="cardName" name="cardName">
+    <ul>
+        <li> 
+            <label for="expiryDate">Expir Month</label>
+            <input type="text" id="expiryDate" name="expiryDate">
+        </li>
+        <li> 
+            <label for="expiryDate">Expiry Year:</label>
+            <input type="text" id="expiryDate" name="expiryDate">
+        </li>
+        <li>
+            <label for="cvv/cvn">CVV/CVN:</label>
+            <input type="password" id="cvv/cvn" name="cvv/cvn">
+        </li>
+    </ul>
+    </form>
+</body>
+</html>
