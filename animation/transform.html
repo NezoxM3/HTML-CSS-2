@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+
+            background-color: rgb(8, 9, 54);
+        }
+        div{
+            margin-top: 20px;
+            margin-left: 30px;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(78, 94, 233);
+        }
+
+        
+        .boxTranslateX{
+            transition: transform 0.5s ease;
+        }
+
+/* пересування по X але можна і по Y */
+        .boxTranslateX:hover{
+              transform: translateX(100px);
+        }
+
+        .boxScale{
+            transition: transform 0.5s ease;;
+        }
+
+        /* масштаб */
+        .boxScale:hover{
+            transform: scale(0.5);
+        }
+
+
+        .boxScaleX{
+            transition: transform 0.5s ease;;
+        }
+
+        /* масштаб по координаті */
+        .boxScaleX:hover{
+            transform: scaleX(0.5);
+        }
+
+        .boxRotate{
+            transition: transform 0.5s ease;;
+        }
+
+        /* поворот */
+        .boxRotate:hover{
+            transform: rotate(45deg);
+        }
+
+        .boxSkew{
+            transition: transform 0.5s ease;;
+        }
+
+        /* розтягування за кути */
+        .boxSkew:hover{
+            transform: skew(30deg , 10deg);
+        }
+
+
+        .boxSkewX{
+            transition: transform 0.5s ease;;
+        }
+
+        /* розтягування за кут по вісі */
+        .boxSkewX:hover{
+            transform: SkewX(45deg);
+        }
+
+        .boxTranslate{
+            transition: transform 0.5s ease;;
+        }
+
+        /* переміщення */
+        .boxTranslate:hover{
+            transform: translate(100px,10px);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class = "boxTranslateX"></div>
+
+    <div class = "boxScale"></div>
+
+    <div class = "boxScaleX"></div>
+
+    <div class = "boxRotate"></div>
+
+    <div class = "boxSkew"></div>
+
+    <div class = "boxSkewX"></div>
+
+    <div class = "boxTranslate"></div>
+</body>
+</html>
