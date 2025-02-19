@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Анімації</title>
+    <style>
+        body{
+            background-color: rgb(40, 28, 45);
+            color: white;
+        }
+
+        /* 1) Мигаючий текст */
+        .flashing-text{
+            animation: flick 0.6s infinite;
+        }
+        @keyframes flick {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* 2) Підстрибуючий м'яч */
+        .bouncing-ball{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(74, 61, 129);
+            border-radius: 50%;
+            animation: bounce 1s infinite ease-in-out;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-100px); }
+        }
+
+        /* Рухаючий текст */
+        .running-text{
+            font-size: 2rem;
+            animation: run 4s linear infinite;
+        }
+        @keyframes run {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100vw); }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="flashing-text">(Мілан 1:2 Фейенорд)</h1>
+    <div class="bouncing-ball"></div>
+    <div class="running-text">(Ман Сіті - Реал сьогодні!)</div>
+</body>
+</html> 
