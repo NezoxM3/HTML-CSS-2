@@ -26,10 +26,62 @@
             }
         }
 
-    </style>
 
+
+        .box1{
+            margin-top: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            animation: colorChange 3s infinite alternate;
+        }
+
+        @keyframes colorChange{
+            0% {background-color: blue;}
+            50% {background-color: yellow;}
+            100% {background-color: red;}
+        }
+
+    
+        .box2{
+            margin-top: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            animation: complexMove 3s infinite alternate ease-in-out;
+            position: relative;
+        }
+
+        @keyframes complexMove{
+            0%{
+                left: 0;
+                top: 0;
+                transform: rotate(0) scale(1);
+                opacity: 1;
+            }
+        
+            50%{
+                left: 100px;
+                top: 200px;
+                transform: rotate(45deg) scale(1.5);
+                opacity: 0.5;
+            }
+
+            100%{
+                left: 200px;
+                top: 0;
+                transform: rotate(0) scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
+    
     <div class = "box"></div>
+    
+    <div class = "box1"></div>
+
+    <div class = "box2"></div>
 </body>
-</html>
+</html> 
