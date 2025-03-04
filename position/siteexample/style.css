@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header{
+    height: 600px;
+    background: url("img_position/top-header.jpg") no-repeat fixed center;
+    overflow: hidden; 
+}
+
+
+h1{
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    padding-top: 220px;
+    text-shadow: 1px 1px 3px white;
+}
+
+
+.logo{
+    float: left;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+.logo img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+nav{
+    height: 80px;
+    width: 100%;
+    padding: 10px 40px;
+    background-color: #43B02A;
+    color: white;
+    position: fixed;
+    z-index: 10;
+
+}
+
+
+nav ul{
+    float: right;
+    list-style-type: none;
+}
+
+nav li{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    text-shadow: 1px 1px 3px white;
+}
+
+
+.wrap{
+    margin: -60px 30px 30px;
+    border-radius: 6px;
+    box-shadow: 16px 24px 2px rgba(0,0,0,0.14);
+    background-color: #fff;
+    padding: 15px;
+}
+
+
+section{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 60px;
+}
+
+h2{
+    font-size: 60px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #43B02A;
+}
+
+.review{
+    display: inline-block;
+    width: 31%;
+    margin-right: 3%;
+    background-color: white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);
+    margin-bottom: 30px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.review:last-of-type{
+    margin-right: 0;
+}
+
+.review::before{
+    content: url(img_position/icons/quots.svg);
+    font-size: 24px;
+}
+
+.author{
+    font-size: bold;
+}
+
+.author-img{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    top: 40px;
+}
+-----------------------------
+#teams{
+    text-align: center;
+    padding: 50px;
+}
+.team-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.team-card{
+    background: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.team-icon1{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: black;
+    margin-left: -30px;
+}
+
+.team-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#program{
+    padding: 50px;
+}
+.program-container{
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.program-title{
+    background: #E4AA52;
+    padding: 10px;
+    font-weight: bold;
+}
+.program-image img{
+    width: 450px;
+    height: 300px;
+    border-radius: 10px;
+}
