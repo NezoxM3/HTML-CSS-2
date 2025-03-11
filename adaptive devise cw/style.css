@@ -1,0 +1,275 @@
+ /* звернемось до всіх елементів, щоб прибрати відступи, які назначає браузер за замовчуванням*/
+*{
+    padding:0;
+    margin:0;
+}
+ 
+html {
+    /*задамо основний розмір шрифту, для того, щоб користуватись відносною одиницею rem*/
+    font-size:16px;
+}
+ 
+body {
+    /* заховаємо контент, який перевищує ширину вікна браузера */
+    overflow-x:hidden;
+    /* встановлюємо основний шрифт контенту - системний - це дозволить швидше завантажувати сторінку */
+    font-family:Helvetica, Tahoma, Verdana, sans-serif;
+    /* Одиниця rem задає розмір шрифту елементу <html> */
+    font-size:1rem;
+    color:rgb(75, 75, 75);
+}
+h1, h2, h3, a {
+    /* шрифт для заголовків і посилань буде 'Bitter', який ми підключили за допомогою тегу <link> */
+    font-family:'Bitter', serif;
+    font-weight:400;
+    color:rgb(105, 105, 105);
+}
+ 
+/* для основного контейнеру будемо використовувати фіксовано-резинову верстку */
+.container {
+    /* встановлюємо основну ширину, що дорівнює видимій частині вікна браузера */
+    width:100vw;
+    /* встановлюємо мінімальну ширину, до якої можна стискати контейнер, якщо ширина пристрою буде менше - з'явиться горизонтальний скролл*/
+    min-width:320px;
+    /* встановлюємо максимальну ширину, до якої можна розширювати контейнер, якщо ширина пристрою буде більша - з боків з'являться відступи*/
+    max-width:1200px;
+    /* для того, щоб контейнер знаходився завжди по центру,по горизонталі вказуємо значення для зовнішніх відступів*/
+    margin:auto;
+    /* у випадку якщо контенту буде замало, щоб сторінка повністю зайняла всю висоту вікна браузера, встановлюємо мінімальну висоту*/
+    min-height:100vh;
+    /* у випадку, якщо контенту буде багато, щоб з'явився вертикальний скролл, встановлюємо значення висоти яка дорівнює вмісту*/
+    height:auto;
+    /* для простішого розташування елементів на сторінці, скористаємось технологією flexBox*/
+    display:flex;
+    /* напрямок основної осі змінюємо на вертикальний*/
+    flex-direction:column;
+}
+ 
+/* кожному елементу контейнеру встановлюватимемо фоновий колір, для наочності */
+header {
+    /* задамо розмір header по основній осі */
+    flex-basis:10vh;
+    /* елементи шапки сайту розташовуються зліва на право */
+    display:flex;
+    /* між елементами задаємо відступ */
+    justify-content:space-between;
+    /* відступ справа та зліва залежить від ширини вікна браузера */
+    padding:0 3vw;
+}
+ 
+header h1 {
+    /* вирівнюємо зміст дочірнього елементу за вертикаллю */
+    align-self:center;
+}
+ 
+header nav {
+    /* вирівнюємо зміст дочірнього елементу за вертикаллю */
+    align-self:center;
+    /* для того, щоб легше розташувати посилання, скористаємось технологією flexBox */
+    display:flex;
+}
+ 
+/* стильове оформлення посилань основного меню */
+header nav a {
+    display:block;
+    margin-left:2vw;
+    padding:0.5vw 1vw;
+    /**/
+    font-size:1.1rem;
+    text-decoration:none;
+    border:2px solid transparent;
+}
+ 
+header nav a:hover, header nav a.active {
+    border-bottom:2px solid rgba(105, 105, 105, 0.5);
+}
+ 
+/* main - основний елемент сторінки є одночасно і flex-батьком і flex-контейнером */
+main {
+    /* щоб заповнювати весь простір по основній осі основним елементом прописуємо
+       властивість flex */
+    flex:11 auto;
+    display:flex;
+    /* дочірні елементи розташовуються зліва на право */
+    justify-content:space-between;
+    padding-top:2vh;
+}
+ 
+main>aside {
+    /* задамо розмір лівої частини но основній осі у відсотках */
+    flex-basis:20%;
+}
+ 
+main>aside>div {
+    /* задаємо відступи у відсотках від ширини батьківського елементу */
+    padding:3% 10%;
+}
+ 
+main>aside>div>* {
+    border-bottom:2px solid rgba(105, 105, 105, 0.3);
+    margin-bottom:2vh;
+}
+ 
+main>aside>div>h3 {
+text-transform:capitalize;
+}
+ 
+.news {
+    font-size:0.9rem;
+    padding-bottom:5px;
+}
+ 
+.news>* {
+    display:block;
+    padding-bottom:7px;
+}
+ 
+.news>h2>a {
+    font-size:1.1rem;
+    text-decoration:none;
+}
+ 
+.news>strong, .news>em {
+    color:rgb(155, 155, 155);
+    font-size:0.7rem;
+}
+ 
+.news>strong {
+    text-transform:uppercase;
+}
+ 
+main>section {
+    /*щоб заповнити весь простір по основній осі основним елементом прописуємо властивість flex */
+    flex:1155%;
+}
+ 
+main>section>article {
+    padding:1%5%;
+}
+ 
+main>section>article>* {
+    display:block;
+    padding-bottom:1.5vh;
+}
+ 
+main>section>article>h2 {
+    text-transform:uppercase;
+}
+ 
+main>section>article>em {
+    color:rgb(155, 155, 155);
+    font-size:0.9rem;
+}
+ 
+main>section>article>img {
+    /* задаємо зображенню ширину 100% від ширини батьківського елементу*/
+    width:100%;
+}
+ 
+.social {
+    text-align:right;
+}
+ 
+/* соціальні мережі підключаємо використовуючи зображення, що складається з трьох іконок соціальних мереж. В такому разі завантажується одне зображення замість трьох і, як наслідок, швидкість завантаження сайту вище.*/
+.social>a {
+    /* змінюємо відображення посилання з рядкового на рядково-блочний */
+    display:inline-block;
+    /* розмір посилання дорівнює розміру однієї іконки */
+    width:32px;
+    height:32px;
+    /* у випадку, якщо путь до зображення не містить пробілів або спеціальних
+       символів, можна прописувати його без лапок*/
+    background-image:url(images/social_icons.png);
+    background-repeat:no-repeat;
+    /* встановлюємо розмір так, щоб відображалась лише одна іконка */
+    background-size:300%;
+    opacity:0.7;
+}
+ 
+/* змінюємо позиціонування фонового зображення у відповідності з класом для соцмережі */
+.social>a.fb {
+    background-position:00;
+}
+ 
+.social>a.tw {
+    background-position:50%0;
+}
+ 
+.social>a.inst {
+    background-position:100%0;
+}
+ 
+main>section+aside {
+    /* задамо розмір лівої частини по основній осі у відсотках */
+    flex-basis:20%;
+}
+main>section+aside figure * {
+    display:block;
+    padding-bottom:7px;
+}
+ 
+main>section+aside figure img {
+    opacity:0.5;
+    width:32px;
+    height:32px;
+}
+main>section+aside figure figcaption {
+    font-size:0.9rem;
+}
+ 
+main>section+aside figure figcaption em {
+    color:rgb(155, 155, 155);
+    font-size:0.7rem;
+}
+ 
+footer {
+    /* задамо розмір footer по основній осі */
+    flex-basis:5vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+ 
+ 
+/* запит для екранів з максимальною шириною 960px і менше */
+@media (max-width:960px) {
+    main>section+aside {
+        /* заховаємо правий елемент на всіх пристроях, з шириною 960px і менше */
+        display:none;
+    }
+    main>aside {
+        /* задамо розмір лівої частини по основній осі у відсотках */
+        flex-basis:30%;
+    }
+    main>section {
+        /* задамо розмір центральної частини по основній осі у відсотках */
+        flex-basis:70%;
+    }
+}
+ 
+/* запит для екранів з максимальною шириною 570px і менше */
+@media (max-width:570px) {
+    header {
+        flex-basis:auto;
+        /* змінюємо напрямок основної осі сайту */
+        flex-direction:column;
+    }
+    main {
+        /* змінюємо напрямок основної осі елементу, який відображає основний контент */
+        flex-direction:column;
+    }
+    main>aside {
+        /* задамо розмір видимому елементу aside по основній осі */
+        flex-basis:20vh;
+    }
+    main>aside>div {
+        padding:3% 5%;
+    }
+    main>section {
+        /* задамо розмір основному контенту по основній осі */
+        flex-basis:auto;
+        /* змінимо порядок відображення елементів так, щоб контент знаходився вище */
+        order:-1;
+    }
+}
