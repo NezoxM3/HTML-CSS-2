@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; 
+    background-color: #f8f8f8;
+}
+
+.container{
+    padding-top: 50px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;     
+}
+
+.block{       
+    min-width: 250px; 
+    padding: 20px;
+    border: 2px dotted  #ccc; 
+    background: white;
+    text-align: center;
+    transition: 0.3s;
+}
+
+@media (max-width: 900px){
+    .block{
+        grid-template-columns: repeat(auto-fit, minmax(500px, 2fr));
+    } 
+}
