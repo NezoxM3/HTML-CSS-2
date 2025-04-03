@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+} 
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+nav {
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.coffee-menu {
+    padding: 50px 0; 
+    background-image: url(final-img/food-background-pattern-texture-healthy-eating-line-icons_857340-4225.jpg.avif);
+}
+
+.coffee-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.coffee-item {
+    width: 250px;
+    background-color: #222;
+    color: #222; 
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.coffee-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.coffee-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #bada55;
+}
+
+.coffee-item p {
+    font-size: 14px;
+}
+
+footer {
+    background: linear-gradient(to top, #7ED26F, #343434); 
+    padding: 40px 0;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-info {
+    width: 30%;
+    color: white;
+}
+
+.footer-info h1 {
+    font-size: 28px;
+}
+
+.footer-info h2 {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.footer-form {
+    width: 40%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer-form input,
+.footer-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.footer-form button {
+    background: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.footer-social {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-social img {
+    width: 100px;
+    height: 100px; 
+}
